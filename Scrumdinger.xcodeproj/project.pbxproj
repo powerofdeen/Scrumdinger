@@ -23,6 +23,8 @@
 		706B76B02970FCC10014FBA5 /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B76AF2970FCC10014FBA5 /* TrailingIconLabelStyle.swift */; };
 		706B76B22970FFA40014FBA5 /* ScrumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B76B12970FFA40014FBA5 /* ScrumsView.swift */; };
 		706B76B429711A2A0014FBA5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706B76B329711A2A0014FBA5 /* DetailView.swift */; };
+		70C9CF5929792BA0006D0F4C /* SpeachRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9CF5829792BA0006D0F4C /* SpeachRecognizer.swift */; };
+		70C9CF5B29792DF5006D0F4C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9CF5A29792DF5006D0F4C /* HistoryView.swift */; };
 		70DD785D29768258004E8A54 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DD785C29768258004E8A54 /* ScrumTimer.swift */; };
 		70DD785F29768C43004E8A54 /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DD785E29768C43004E8A54 /* MeetingFooterView.swift */; };
 		70DD78622976902A004E8A54 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70DD78612976902A004E8A54 /* ding.wav */; };
@@ -52,6 +54,8 @@
 		706B76AF2970FCC10014FBA5 /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
 		706B76B12970FFA40014FBA5 /* ScrumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumsView.swift; sourceTree = "<group>"; };
 		706B76B329711A2A0014FBA5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		70C9CF5829792BA0006D0F4C /* SpeachRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeachRecognizer.swift; sourceTree = "<group>"; };
+		70C9CF5A29792DF5006D0F4C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		70DD785C29768258004E8A54 /* ScrumTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
 		70DD785E29768C43004E8A54 /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
 		70DD78612976902A004E8A54 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				70EB0E9C2974E90C00336372 /* DetailEditView.swift */,
 				706B76B329711A2A0014FBA5 /* DetailView.swift */,
 				701C6B0E2977C4DF003900BC /* ErrorView.swift */,
+				70C9CF5A29792DF5006D0F4C /* HistoryView.swift */,
 				70DD785E29768C43004E8A54 /* MeetingFooterView.swift */,
 				70EB0EA22975354500336372 /* MeetingHeaderView.swift */,
 				701C6B102977E503003900BC /* MeetingTimerView.swift */,
@@ -133,6 +138,7 @@
 				701C6B0829778576003900BC /* History.swift */,
 				701C6B0A2977A744003900BC /* ScrumStore.swift */,
 				70DD785C29768258004E8A54 /* ScrumTimer.swift */,
+				70C9CF5829792BA0006D0F4C /* SpeachRecognizer.swift */,
 				706B76A92970F2310014FBA5 /* Theme.swift */,
 			);
 			path = Models;
@@ -218,7 +224,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				701C6B0929778576003900BC /* History.swift in Sources */,
+				70C9CF5B29792DF5006D0F4C /* HistoryView.swift in Sources */,
 				70EB0EA12975183800336372 /* ThemePicker.swift in Sources */,
+				70C9CF5929792BA0006D0F4C /* SpeachRecognizer.swift in Sources */,
 				70EB0EA52975387E00336372 /* ScrumProgressViewStyle.swift in Sources */,
 				70DD785F29768C43004E8A54 /* MeetingFooterView.swift in Sources */,
 				701C6B0B2977A744003900BC /* ScrumStore.swift in Sources */,
@@ -370,6 +378,8 @@
 				DEVELOPMENT_TEAM = 5V857Y2R9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "회의를 녹음하기 위해 오디오가 녹음됩니다. 오디오 녹음은 필사 후 폐기됩니다.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "앱에서 회의의 텍스트 기록을 볼 수 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -400,6 +410,8 @@
 				DEVELOPMENT_TEAM = 5V857Y2R9A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "회의를 녹음하기 위해 오디오가 녹음됩니다. 오디오 녹음은 필사 후 폐기됩니다.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "앱에서 회의의 텍스트 기록을 볼 수 있습니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

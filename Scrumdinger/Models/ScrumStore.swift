@@ -8,9 +8,13 @@
 import Foundation
 import SwiftUI
 
+// ObservavleObject 프로토콜
 class ScrumStore: ObservableObject {
+    
+    // @Published 속성 래퍼가 붙은 변수를 변경하면 뷰가 업데이트 됨
     @Published var scrums: [DailyScrum] = []
     
+    // 스크럼 내용 저장
     private static func fileURL() throws -> URL {
         try FileManager.default.url(for: .documentDirectory,
                                     in: .userDomainMask,
@@ -71,6 +75,7 @@ class ScrumStore: ObservableObject {
         }
     }
     
+    // 이전 방식
     static func save(scrums: [DailyScrum], completion: @escaping (Result<Int, Error>) -> Void) {
         do {
             let data = try JSONEncoder().encode(scrums)

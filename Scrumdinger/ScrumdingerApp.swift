@@ -15,6 +15,7 @@ struct ScrumdingerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
+                // $프로젝션 또는 바인딩을 나타냄
                 ScrumsView(scrums: $store.scrums) {
 //                    ScrumStore.save(scrums: store.scrums) { result in
 //                        if case .failure(let error) = result {
